@@ -38,12 +38,12 @@ cd [project name]
 npx @angular/cli add @angular/pwa
 
 # add onesignal
-npx @angular/cli add ngx-onesignal --appId=[your onesignal appId]
+npx @angular/cli add git+https://github.com/shimatai/ngx-onesignal.git --appId=[your onesignal appId]
 ```
 
 ### 3. custmize angular app
 
-see [sample code](https://github.com/MSakamaki/ngx-onesignal/tree/master/src/app)
+see [sample code](https://github.com/shimatai/ngx-onesignal/tree/master/src/app)
 
 ### 4. build and run
 
