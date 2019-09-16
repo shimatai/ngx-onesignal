@@ -70,6 +70,14 @@ export class OneSignalService {
     }
   }
 
+  @ExecIf('isInitialized')
+  public sendTag(key: string, value: string) {
+    if (this.isSupported) {
+      OneSignal.sendTag(key, value, () => {});
+      return Promise.resolve(true);
+    }
+  }
+
   constructor(
     @Inject(DOCUMENT) private readonly doc: Document,
     private readonly options: OneSignalOptions,

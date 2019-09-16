@@ -44,6 +44,7 @@ export interface OneSignalStub {
   isOptedOut: () => Promise<boolean>;
   isPushNotificationsSupported: () => Promise<boolean>;
   subscriptionChange: (fnc: (isSubscribed: boolean) => void) => Promise<void>;
+  sendTag: (key: string, value: string) => Promise<boolean>;
 
   push: (fnc: Array<string | any>) => void;
   on: (func: string, callback: (result: any) => void) => void;
